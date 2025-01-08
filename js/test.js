@@ -1,13 +1,17 @@
 import dom from './index.js'
 
 // Array
+const selector = document.querySelectorAll('li')
+// const selector = 'li'
+// const selector = document.querySelectorAll('ul li')
 
-// dom('ul li').map(li => {
+
+// dom(selector).map(li => {
 //     li.innerText = 'baba'
 //     return li
 // })
 
-// const evens = dom('li')
+// const evens = dom(selector)
 //     .filter(li => +li.innerText % 2)
 //     .map(li => li.outerHTML)
 // const [ elUl ] = dom('ul')
@@ -16,12 +20,12 @@ import dom from './index.js'
 // Events
 
 // const handler = ev => console.log(ev.target.innerText)
-// dom('ul li').on('click, mouseenter mouseleave', handler)
-// dom('ul li').off('click', handler)
+// dom(selector).on('click, mouseenter mouseleave', handler)
+// dom(selector).off('click', handler)
 
 // ClassList
 
-// const elLis = dom('li')
+// const elLis = dom(selector)
 // const elOddLis = dom('li:nth-child(odd)')
 // const elEvenLis = dom('li:nth-child(even)')
 
@@ -31,4 +35,17 @@ import dom from './index.js'
 
 // elEvenLis.addClass('x y,      z\na\tb')
 // elLis.toggleClass('a e x')
+// elLis.forEach((el, idx) => console.log(idx, el))
+
+// Chaining
+
+// const handler = ev => console.log(ev.target.innerText)
+// const elLis = dom(selector)
+// elLis
+//     .addClass('a b,c')
+//     .attr('title', 'baba')
+//     .attr('data-i', 1)
+//     .on('click mouseenter', handler)
+//     .off('mouseenter', handler)
+
 // elLis.forEach((el, idx) => console.log(idx, el))
